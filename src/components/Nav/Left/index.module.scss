@@ -1,0 +1,12 @@
+.menus {
+  height: 100%;
+  overflow: auto;
+  :global {
+    .ant-menu {
+      height: 100%;
+    }
+    .ant-menu-item {
+      margin: 0;
+    }
+  }
+}

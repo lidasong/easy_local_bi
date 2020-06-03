@@ -1,0 +1,33 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex: 0 0 50%;
+  padding: 8px;
+  min-height: 400px;
+}
+.add {
+  position: relative;
+  cursor: pointer;
+  .inner {
+    height: 100%;
+  }
+  .iconAdd {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 48px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}
+.inner {
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  .title {
+    padding: 10px 4px;
+    border-bottom: 1px solid #ebebeb;
+  }
+}

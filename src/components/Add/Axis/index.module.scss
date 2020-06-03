@@ -1,0 +1,15 @@
+.axis {
+  font-size: 12px;
+  padding: 4px 12px;
+  border: 1px solid #efefef;
+  align-items: center;
+  &:not(:first-child) {
+    margin: 8px 0;
+  }
+}
+.type {
+  border-right: 1px solid #ddd;
+}
+.fields {
+  padding-left: 8px;
+}

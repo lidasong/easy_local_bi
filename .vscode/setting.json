@@ -1,0 +1,31 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "eslint.validate": [
+    "json",
+    "javascript",
+    "javascriptreact",
+    {
+    "language": "typescript",
+    "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ]
+}

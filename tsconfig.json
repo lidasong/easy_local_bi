@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "allowJs": true,
+        "jsx": "react",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "Node"
+    },
+    "include": [
+        "src/**/*",
+        "*.ts",
+        "*.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.test.ts"
+    ]
+}
