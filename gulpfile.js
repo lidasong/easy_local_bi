@@ -15,7 +15,7 @@ function clearConsole() {
 
 function start(compiler, call) {
   const devServer = new WebpackDevServer(compiler, {
-    contentBase: path.resolve(__dirname, ''),
+    contentBase: path.resolve(__dirname, 'static'),
     hotOnly: true,
     hot: true,
     historyApiFallback: {

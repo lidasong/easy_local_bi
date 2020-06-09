@@ -57,10 +57,10 @@ const chartTypes = [
     title: "指环图",
     value: "ring",
   },
-  {
-    title: "双轴图",
-    value: "duplex",
-  },
+  // {
+  //   title: "双轴图",
+  //   value: "duplex",
+  // },
 ];
 
 const RowWrap = React.forwardRef<HTMLDivElement, any>((props, ref) => {

@@ -115,7 +115,6 @@ export default () => {
   const changeSheet = (sheet: any) => {
     setCur(sheet);
   };
-  console.log(current, sheets, "----current----");
   return (
     <>
       <Dragger {...setProps(setSheets)}>

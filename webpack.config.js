@@ -6,8 +6,6 @@ const AutoDllPlugin = require('autodll-webpack-plugin')
 const webpack = require('webpack')
 const threadLoader = require('thread-loader');
 
-threadLoader.warmup({}, ['babel-loader', 'ts-loader', 'eslint-loader', 'sass-loader'])
-
 module.exports = function getConfig(port = 8000) {
   const { NODE_ENV } = process.env;
   const isDev = NODE_ENV === 'development';
@@ -26,9 +24,9 @@ module.exports = function getConfig(port = 8000) {
     },
     output: {
       filename: isDev ? '[name].js' : '[name].[hash].js',
-      chunkFilename: isDev ? '[name].js' : '[name].[chunckhash].js',
-      path: path.resolve(__dirname, 'dist'),
-      publicPath: '/mugong/bi'
+      chunkFilename: isDev ? '[name].js' : '[name].[chunkhash].js',
+      publicPath: '/',
+      path: path.resolve(__dirname, 'dist')
     },
     devtool: isDev ? 'inline-source-map' : '',
     resolve: {
@@ -43,6 +41,14 @@ module.exports = function getConfig(port = 8000) {
     },
     module: {
       rules: [
+        // {
+        //   include: [path.join(__dirname, 'src')],
+        //   test: /\.[xlsx|jpg|svg|png]/,
+        //   loader: 'file-loader',
+        //   options: {
+        //     name: 'static/[name].[hash:8].[ext]'
+        //   }
+        // },
         {
           test: /\.(scss|css)$/,
           exclude: /node_modules/,
@@ -53,9 +59,6 @@ module.exports = function getConfig(port = 8000) {
                 hmr: process.env.NODE_ENV === 'development',
               },
             },
-            // {
-            //   loader: 'thread-loader'
-            // },
             {
               loader: 'css-loader',
               options: {
@@ -92,9 +95,6 @@ module.exports = function getConfig(port = 8000) {
           test: /\.tsx?$|\.jsx?$/,
           exclude: /node_modules/,
           use: [
-            // {
-            //   loader: 'thread-loader'
-            // },
             {
               loader: 'babel-loader',
               options: {
@@ -119,18 +119,13 @@ module.exports = function getConfig(port = 8000) {
             }
           ],
         },
-        // {
-        //   test: /\.tsx?$|\.jsx?$/,
-        //   enforce: 'pre',
+        // (isDev ? {} : {
+        //   test: /\.tsx$/,
         //   include: [path.join(__dirname, 'src')],
         //   use: {
-        //     loader: 'eslint-loader',
-        //     options: {
-        //       fix: true,
-        //       quiet: true
-        //     }
+        //     loader: path.resolve(__dirname,'helpers/loaders/setBaseUrl.js')
         //   }
-        // },
+        // })
       ]
     },
     plugins: [

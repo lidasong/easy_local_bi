@@ -34,7 +34,7 @@ export default class extends React.Component<any, any> {
           size="default"
           direction="vertical"
         >
-          <Step title="上传excel数据" description={<Model />} />
+          <Step title={<div>上传excel数据</div>} description={<Model />} />
           <Step
             title="新建页面"
             description={<Button onClick={this.onTogglePage}>新建</Button>}
