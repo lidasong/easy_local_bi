@@ -1,5 +1,13 @@
 # 离线BI分析（简单版）
 
+`git clone git@github.com:lidasong/easy_local_bi.git`
+
+`npm install`
+
+`npm start`
+
+[127.0.0.1:8000](127.0.0.1:8000)
+
 ## what is it
   根据excel文件内容，基于websql本地生成对应的表结构
 
@@ -71,6 +79,13 @@ and after you clicked, you'll be at the added page
 
 #### circle
 ![](./static/ring.png)
+
+## overall
+
+after you finish you page, switch to that, you'll find the whole content
+
+![](./static/overall.png)
+
 
 ## Issues
 
