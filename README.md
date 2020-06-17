@@ -19,7 +19,7 @@
 ### first
 
 upload your wanting analyze data source by excel file
-[demo excel](./static/order.xlsx)
+[demo excel](./示例 - 超市.xlsx)
 
 ![](./static/first.png)
 
