@@ -13,8 +13,6 @@
 
 ## demo
   https://lidasong.github.io/mugong/bi
-  
-  <a href="https://github.com/lidasong/easy_local_bi/blob/master/%E7%A4%BA%E4%BE%8B%20-%20%E8%B6%85%E5%B8%82.xlsx" download>test_data</a>
 
 ## how to use
 
